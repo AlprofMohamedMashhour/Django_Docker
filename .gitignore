@@ -33,3 +33,5 @@ setup/migrations/
 user/migrations/
 *.sqlite3
 models.py
+
+static/

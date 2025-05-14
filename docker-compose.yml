@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # db:
+  #   image: postgres:13
+  #   environment:
+  #     - POSTGRES_DB=postgres
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data/
+
+  web:
+    build: .
+    command: bash -c " python manage.py migrate && gunicorn --bind 0.0.0.0:8000 project.wsgi:application"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=project.settings
+      # - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
+    # depends_on:
+    #   - db
+
+# volumes:
+#   postgres_data:
