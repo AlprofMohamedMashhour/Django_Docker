@@ -1,0 +1,35 @@
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+
+Server.rar
+Oracle_Config.md
+model-tables.json
+Oracle_Config.md
+Oracle_Config.md
+help files/تقارير الميزان.xlsx
+setup/migrations/
+user/migrations/
+*.sqlite3
+models.py
